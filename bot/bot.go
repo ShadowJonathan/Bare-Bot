@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"../belter"
+	"../body"
 )
 
 func main() {
