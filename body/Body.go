@@ -14,24 +14,24 @@ type Version struct {
 	ExperimentalVersion byte
 }
 
-type BlueBot struct {
+type Bot struct {
 	dg      *discordgo.Session
 	version Version
 }
 
 // Vars after this
 
-var bbb *BlueBot
+var bbb *Bot
 var err error
 
 // Functions after this
 
 func Initialize(Token string) {
-	bbb = &BlueBot{
+	bb = &Bot{
 		version: Version{0, 0, 1, true, 1},
 	}
 
-	bbb.dg, err = discordgo.New("BOT " + Token)
+	bb.dg, err = discordgo.New("BOT " + Token)
 	if err != nil {
 		fmt.Println("Discord Session error, check token, error message: " + err.Error())
 		return
